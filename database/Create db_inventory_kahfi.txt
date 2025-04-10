@@ -1,0 +1,19 @@
+Create db_inventory_kahfi
+
+
+CREATE TABLE barang
+(id_barang int PRIMARY KEY,
+nama_barang varchar (30),
+id_jenis int,
+harga varchar (25),
+stok int);
+
+CREATE TABLE jenis
+(id_jenis PRIMARY KEY,
+nama_jenis varchar (30));
+
+INSERT INTO barang VALUES
+(001,"kursi",01,"rp.100.000",4),
+(002,"meja",01,"rp.500.000",4),
+(003,"lemari",02,"rp.900.000",5),
+(004,"piring",02,"rp.20.000",10);
