@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <title>Data parkir</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Barang</title>
 </head>
 
 <body>
@@ -32,7 +33,7 @@
 
     <div class="container">
         <h1>Data Jenis Barang Kahfi</h1>
-        <a href="view_tambah.php" class="btn btn-primary">Tambah data parkir Baru</a>
+        <a href="view_tambah.php" class="btn btn-primary">Tambah Barang Baru</a>
         <table class="table">
             <thead>
                 <tr>
@@ -65,11 +66,11 @@
                             <td><?php echo $data['harga'] ?></td>
                             <td><?php echo $data['stok'] ?></td>
                             <td>
-                            <a href="edit.php?id=<?php echo $data['id_barang']; ?>" 
-                            class="btn btn-warning">Edit</a>
-                            <a href="hapus.php?id=<?php echo $data['id_barang']; ?>"
+                            <a href="view_edit.php?id=<?php echo $data['id_barang']; ?>" 
+                            class="btn btn-warning"><i class="fa-solid fa-newspaper"></i>Edit</a>
+                            <a href="proses_hapus.php?id=<?php echo $data['id_barang']; ?>"
                             class="btn btn-danger" onclick="return confirm
-                            ('Apakah Anda yakin ingin menghapus data ini?')">Hapus</a>
+                            ('Apakah Anda yakin ingin menghapus data ini?')"><i class="fa-solid fa-trash-can"></i>Hapus</a>
                             </td>
                         </tr>
                         <?php

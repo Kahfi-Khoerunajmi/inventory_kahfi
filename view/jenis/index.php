@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <title>Data parkir</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Jenis barang</title>
 </head>
 
 <body>
@@ -59,11 +60,9 @@
                             <td><?php echo $data['id_jenis'] ?></td>
                             <td><?php echo $data['nama_jenis'] ?></td>
                             <td>
-                            <a href="edit.php?id=<?php echo $data['id_jenis']; ?>" 
-                            class="btn btn-warning">Edit</a>
-                            <a href="hapus.php?id=<?php echo $data['id_jenis']; ?>"
-                            class="btn btn-danger" onclick="return confirm
-                            ('Apakah Anda yakin ingin menghapus data ini?')">Hapus</a>
+                            <a href="view_edit.php?id=<?php echo $data['id_jenis']; ?>" 
+                            class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i>Edit</a>
+                            
                             </td>
                         </tr>
                         <?php

@@ -21,10 +21,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="../barang/proses_edit.php">barang</a>
+                        <a class="nav-link" aria-current="page" href="../jenis/index.php">Jenis</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../jenis/proses_edit.php">Jenis</a>
+                        <a class="nav-link" href="../barang/index.php">Barang</a>
                     </li>
                 </ul>
             </div>
@@ -33,19 +33,31 @@
     <?php 
     include '../../config/koneksi.php';
     $id=$_GET['id'];
-    $query = mysqli_query($conn, "SELECT * FROM jenis WHERE id_jenis='$id'");
+    $query = mysqli_query($conn, "SELECT * FROM barang WHERE id_barang='$id'");
     $result = mysqli_fetch_array($query);
     ?>
     <div class="container">
-        <h1>Edit Data Jenis</h1>
+        <h1>Edit Data Barang</h1>
         <form action="proses_edit.php" method="POST">
             <div class="mb-3">
-                <label for="id_jenis" class="form-label">ID Jenis</label>
-                <input type="text" class="form-control" value="<?php echo $result['id_jenis'];?>" name="id_jenis" id="id_jenis" required>
+                <label for="id_barang" class="form-label">ID Barang</label>
+                <input type="text" class="form-control" value="<?php echo $result['id_barang'];?>" name="id_barang" id="id_barang" required>
             </div>
             <div class="mb-3">
-                <label for="nama_jenis" class="form-label">Nama Jenis</label>
-                <input type="text" class="form-control" value="<?php echo $result['nama_jenis'];?>"name="nama_jenis" id="nama_jenis" required>
+                <label for="nama_barang" class="form-label">Nama barang</label>
+                <input type="text" class="form-control" value="<?php echo $result['nama_barang'];?>"name="nama_barang" id="nama_barang" required>
+            </div>
+            <div class="mb-3">
+                <label for="id_jenis" class="form-label">ID jenis</label>
+                <input type="text" class="form-control" value="<?php echo $result['id_jenis'];?>"name="id_jenis" id="id_jenis" required>
+            </div>
+            <div class="mb-3">
+                <label for="harga" class="form-label">harga</label>
+                <input type="text" class="form-control" value="<?php echo $result['harga'];?>"name="harga" id="harga" required>
+            </div>
+            <div class="mb-3">
+                <label for="stok" class="form-label">stok</label>
+                <input type="text" class="form-control" value="<?php echo $result['stok'];?>"name="stok" id="stok" required>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
